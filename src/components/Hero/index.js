@@ -40,7 +40,7 @@ const RightContent = () => {
 
 
 const Hero = () => {
-    return ( <div className="flex my-16 mx-16">
+    return ( <div className="flex">
             <LeftContent />
             <RightContent />
     </div> );
