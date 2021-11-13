@@ -4,6 +4,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        'pink-light':'#FFE2D9',
         'red-light':'#FFD8CC',
         'red-medium':'#E95C27',
         'red-dark':'#E24717',
