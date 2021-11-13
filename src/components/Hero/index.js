@@ -14,14 +14,14 @@ const LeftContent = () => {
 }
 
 const ContentCard = ({children,imageSrc,title,amount}) => {
-    return <div className="mx-12 my-6 bg-red-dark h-40 rounded-2xl flex items-center">
-       <div className="px-14 flex justify-end pr-3">
+    return <div className="mx-12 my-6 bg-red-dark h-40 rounded-2xl flex items-center justify-center">
+        <div className="flex items-center gap-5 max-w-sm w-full">
        <img src={imageSrc} alt="" className=""  style={{maxWidth:70,maxHeight:70}} />
-       </div>
-       <div className="flex-auto">
-            <h3 className="text-orange text-2xl">{title}</h3>
-            <h2 className="text-white text-3xl">{amount}</h2>
+       <div>
+            <h3 className="text-orange text-xl">{title}</h3>
+            <h2 className="text-white text-2xl">{amount}</h2>
             {children}
+       </div>
        </div>
     </div>
 }
@@ -30,7 +30,7 @@ const RightContent = () => {
     return <div className="flex-col w-full bg-red-light rounded-r-2xl pt-10">
             <ContentCard imageSrc="/purse.svg" title="Your LUCHOW Wallet Balance:" amount="8475.565" />
             <ContentCard imageSrc="/lock.svg" title="Remaining Locked Amount:" amount="8475.565">
-            <p className="text-white">Your locked rewards are linearly released over 7 days <br />starting from block# 6499649 to block # 6699649</p>
+                <p className="text-white text-xs">Your locked rewards are linearly released over 7 days <br />starting from block# 6499649 to block # 6699649</p>
             </ContentCard>
             <ContentCard imageSrc="/coin.svg" title="Unlocked Rewards:" amount="8475.565">
                 <button className="text-white border-0 py-2 px-10 focus:outline-none bg-orange-gradient bg-gradient-to-t from-orange to-orange-light hover:to-red-300 rounded-3xl">Claim</button>
