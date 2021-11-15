@@ -27,7 +27,7 @@ const Balance = ({title,amount,currency,imageSrc}) => {
 const RightContent = ({title,buttonText,staked,earned,imageSrc}) => {
     return <div className="bg-red-dark w-full rounded-r-2xl relative" style={{borderTopRightRadius:'7rem',borderBottomRightRadius:'7rem'}}>
         <div className="absolute  w-3/4 bg-cream p-4 -top-7 text-center text-black text-3xl" style={{left:'10%',borderRadius:'4rem'}}>
-            <p className="font-">Stake {title} to Earn LUCHOW Rewards</p>
+            <p className="font-medium">Stake {title} to Earn LUCHOW Rewards</p>
         </div>
         <div className="flex justify-between py-24 px-28 items-center">
             <p className="text-white font-bold text-3xl">{title}</p>
