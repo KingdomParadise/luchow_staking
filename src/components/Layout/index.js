@@ -7,7 +7,7 @@ import Footer from "./footer";
 const Layout = ({children}) => {
     return ( <>
         <Header />
-        <div className="my-16 mx-16">
+        <div className="my-16 mx-64">
         {children}
         </div>  
         <Footer />
