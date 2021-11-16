@@ -1,5 +1,5 @@
 import React from "react";
-
+import WalletPopup from "../WalletPopup";
 
 
 
@@ -23,6 +23,7 @@ const LeftContent = () => {
 }
 
 const ContentCard = ({children,imageSrc,title,amount,displayMatic}) => {
+    const [walletOpen,setWalletOpen] = React.useState(false);
     return <div className="mx-16 my-6 bg-red-dark h-40 rounded-2xl flex items-center justify-center relative" style={{borderRadius:'3rem'}}>
         <div className="flex items-center gap-8 max-w-md w-full">
        <img src={imageSrc} alt="" className=""  style={{maxWidth:80,maxHeight:80,width:'100%',height:'100%'}} />
@@ -40,14 +41,18 @@ const ContentCard = ({children,imageSrc,title,amount,displayMatic}) => {
             {children}
        </div>
        </div>
-       {displayMatic && <div className="absolute top-4 right-8">
+       {displayMatic && <>
+           <div className="absolute top-4 right-8" onClick={() => setWalletOpen(true)}>
             <button className="py-1 rounded-2xl bg-pink-light hover:bg-pink-100 flex w-16 justify-center items-center">
                 <div className="w-10 flex justify-between">
                 <img src="/plus.svg" alt="meta" width={10} />
                 <img src="/meta.svg" alt="meta" width={15} />
                 </div>
             </button>
-       </div>}
+       </div>
+       <WalletPopup open={walletOpen} setOpen={setWalletOpen} />
+       </>
+       }
     </div>
 }
 
