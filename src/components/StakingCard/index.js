@@ -45,10 +45,41 @@ const RightContent = ({title,buttonText,staked,earned,imageSrc}) => {
 
 
 const StakingCard = (props) => {
-    return ( <div className="flex my-32">
-            <LeftContent imageSrc={props?.imageSrc} />
-            <RightContent {...props} />
-    </div> );
+    const [displayAccordion, setDisplayAccordion] = React.useState(false);
+
+    const handleAccordian = () => {
+        setDisplayAccordion(state => !state);
+    }
+    return ( <div className="relative">
+            <div className="flex my-32 cursor-pointer z-20 relative" onClick={handleAccordian}>
+                <LeftContent imageSrc={props?.imageSrc} />
+                <RightContent {...props} />
+            </div>
+           {displayAccordion &&  <><div className="w-full absolute -bottom-64 bg-red-light px-14 py-14 pb-11 z-10" style={{borderRadius:'7rem'}}>
+                <div className="flex justify-around items-center pt-36">
+                    <div className="flex flex-col gap-2">
+                        <p className="text-custom-grey font-medium">Available BNB Balance: 0.00</p>
+                        <input className="bg-white-pink p-2 rounded-full" />
+                        <button className="text-white border-0 mt-10 text-base font-bold py-2 px-10 focus:outline-none bg-orange-normal-gradient bg-gradient-to-t  from-red-dark to-orange-normal hover:to-red-300 rounded-full">Approve</button>
+                    </div>
+                    <div className="flex flex-col gap-2">
+                        <p className="text-custom-grey font-medium">Stacked BNB Balance: 0.00</p>
+                        <input className="bg-white-pink p-2 rounded-full" />
+                        <p className="text-custom-grey font-medium">Approximate Value: <span className="text-red-dark">LUCHOW</span></p>
+                        <button className="text-white border-0 mt-2 text-base font-bold py-2 px-10 focus:outline-none bg-orange-normal-gradient bg-gradient-to-t  from-red-dark to-orange-normal hover:to-red-300 rounded-full">Unstake</button>
+                    </div>
+                    <div className="inline h-48" style={{border:'1px solid #8E8E8E'}} />
+                    <div className="flex flex-col gap-3">
+                      <p className="text-custom-grey font-medium text-lg">Total LUCHOW Rewards</p>
+                      <p className="text-red-dark text-5xl font-medium text-center">0.00</p>
+                      <button className="text-white border-0 mt-2 text-base font-bold py-2 px-10 focus:outline-none bg-orange-normal-gradient bg-gradient-to-t  from-red-dark to-orange-normal hover:to-red-300 rounded-full">Claim</button>
+                    </div>
+                </div>
+            </div>
+            <div className="mb-96" />
+            </>
+            }
+        </div>);
 }
  
 export default StakingCard;

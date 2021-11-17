@@ -12,7 +12,9 @@ module.exports = {
         'orange':'#F9BF80',
         'orange-light':'#F8DA5E',
         'orange-normal':'#FFAD2B',
-        'cream':'#F9BF80'
+        'cream':'#F9BF80',
+        'custom-grey':'#8E8E8E',
+        'white-pink':'#FFF1EC'
       }
     },
   },
