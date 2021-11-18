@@ -29,7 +29,7 @@ const RightContent = ({title,buttonText,staked,earned,imageSrc}) => {
         <div className="absolute  w-3/4 bg-cream p-4 -top-7 text-center text-black text-3xl" style={{left:'10%',borderRadius:'4rem'}}>
             <p className="font-medium">Stake {title} to Earn LUCHOW Rewards</p>
         </div>
-        <div className="flex justify-between py-24 px-28 items-center">
+        <div className="flex justify-between py-24 xl:px-24 px-16 items-center">
             <p className="text-white font-bold text-3xl">{title}</p>
             <button style={{left:'10%',borderRadius:'4rem'}} className="text-white border-0 text-2xl py-4 px-10 focus:outline-none bg-orange-normal-gradient bg-gradient-to-t  from-red-dark to-orange-normal hover:to-red-300 rounded-3xl">
               {buttonText}
@@ -100,7 +100,7 @@ const Accordian = () => {
             <button className="text-white border-0 mt-2 text-base font-bold py-2 px-10 focus:outline-none bg-orange-normal-gradient bg-gradient-to-t  from-red-dark to-orange-normal hover:to-red-300 rounded-full">Unstake</button>
         </div>
         <div className="inline h-48" style={{border:'1px solid #8E8E8E'}} />
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-col gap-3 mt-3">
           <p className="text-custom-grey font-medium text-lg">Total LUCHOW Rewards</p>
           <p className="text-red-dark text-5xl font-medium text-center">0.00</p>
           <button className="text-white border-0 mt-2 text-base font-bold py-2 px-10 focus:outline-none bg-orange-normal-gradient bg-gradient-to-t  from-red-dark to-orange-normal hover:to-red-300 rounded-full">Claim</button>
@@ -113,22 +113,22 @@ const Accordian = () => {
 const ResponsiveAccordian = () => {
     return <div className="lg:hidden w-full absolute -bottom-64 rounded-2xl bg-red-light px-2 py-14 pb-11 z-10">
     <div className="flex justify-around items-center pt-24 gap-2">
-        <div className="flex flex-col gap-1">
-            <p className="text-custom-grey text-xs">Available BNB Balance: 0.00</p>
+        <div className="flex flex-col gap-1 h-40">
+            <p className="text-custom-grey text-xs sm:h-auto h-8">Available BNB Balance: 0.00</p>
             <input className="bg-white-pink p-2 py-1 rounded-full w-24 text-xs" />
             <button className="text-white border-0 w-24 mt-10 text-xs py-2 px-4 focus:outline-none bg-orange-normal-gradient bg-gradient-to-t  from-red-dark to-orange-normal hover:to-red-300 rounded-full">Approve</button>
         </div>
-        <div className="flex flex-col gap-1">
-            <p className="text-custom-grey text-xs">Stacked BNB Balance: 0.00</p>
+        <div className="flex flex-col gap-1 h-40">
+            <p className="text-custom-grey text-xs sm:h-auto h-8">Stacked BNB Balance: 0.00</p>
             <input className="bg-white-pink p-2 py-1 rounded-full w-24 text-xs" />
-            <p className="text-custom-grey text-xs ">Approximate Value: <span className="text-red-dark">LUCHOW</span></p>
-            <button className="text-white border-0 w-24 mt-2 text-xs py-2 px-4 focus:outline-none bg-orange-normal-gradient bg-gradient-to-t  from-red-dark to-orange-normal hover:to-red-300 rounded-full">Unstake</button>
+            {/* <p className="text-custom-grey text-xs ">Approximate Value: <span className="text-red-dark text-xs">LUCHOW</span></p> */}
+            <button className="text-white border-0 w-24 mt-10 text-xs py-2 px-4 focus:outline-none bg-orange-normal-gradient bg-gradient-to-t  from-red-dark to-orange-normal hover:to-red-300 rounded-full">Unstake</button>
         </div>
         <div className="inline h-48" style={{border:'1px solid #8E8E8E'}} />
-        <div className="flex flex-col gap-1">
-          <p className="text-custom-grey text-xs text-center">Total LUCHOW Rewards</p>
+        <div className="flex flex-col gap-1 h-40 sm:mt-2 mt-2">
+          <p className="text-custom-grey text-xs text-center sm:h-auto h-8">Total LUCHOW Rewards</p>
           <p className="text-red-dark text-sm text-center">0.00</p>
-          <button className="text-white border-0 w-24 mt-2 text-xs py-2 px-4 focus:outline-none bg-orange-normal-gradient bg-gradient-to-t  from-red-dark to-orange-normal hover:to-red-300 rounded-full">Claim</button>
+          <button className="text-white border-0 w-24 mt-10 text-xs py-2 px-4 focus:outline-none bg-orange-normal-gradient bg-gradient-to-t  from-red-dark to-orange-normal hover:to-red-300 rounded-full">Claim</button>
         </div>
     </div>
 </div>

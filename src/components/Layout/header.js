@@ -19,10 +19,10 @@ const Header = () => {
    }
     return (<>
 <div className="text-red-medium body-font bg-red-light font-bold">
-  <div className="container mx-auto flex flex-wrap justify-between pt-14 pb-10  md:flex-row items-center gap-36">
+  <div className="container sm:mx-auto flex flex-wrap justify-between lg:pt-14 pt-10 pb-10  md:flex-row items-center sm:gap-36 gap-0">
     <a href="/" className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
       <img src="/lunachow.png" width="66" height="66" alt="logo" className="hidden 2xl:block" />
-      <span className="ml-3 text-red-medium font-bold 2xl:text-5xl text-3xl">LUNACHOW</span>
+      <span className="ml-3 text-red-medium font-bold 2xl:text-5xl text-3xl lg:pt-0 pt-4">LUNACHOW</span>
     </a>
     <nav className="hidden flex-1 2xl:flex flex-wrap items-center text-base justify-between">
       {navigation.map(({ name, path }, index) => <a key={index} href={path} className="mr-5 hover:text-gray-900 text-2xl">{name}</a>)}
