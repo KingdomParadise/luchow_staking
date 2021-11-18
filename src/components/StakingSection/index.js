@@ -5,7 +5,7 @@ import StakingCard from "../StakingCard";
 
 const StakingSection = () => {
     return ( <div className="my-20">
-        <p className="text-red-dark text-center text-6xl my-10 font-bold">7 Available Staking Options</p>
+        <p className="text-red-dark text-center lg:text-6xl text-2xl my-10 font-bold">7 Available Staking Options</p>
         <StakingCard imageSrc="/binance.svg" title="BNB" buttonText="APR 65%" staked="45659.656" earned="846568.854"/>
         <StakingCard imageSrc="/pancake.svg" title="CAKE" buttonText="APR 65%" staked="45659.656" earned="846568.854"/>
         <StakingCard imageSrc="/tether.svg" title="USDT" buttonText="APR 65%" staked="45659.656" earned="846568.854"/>

@@ -15,6 +15,9 @@ module.exports = {
         'cream':'#F9BF80',
         'custom-grey':'#8E8E8E',
         'white-pink':'#FFF1EC'
+      },
+      borderRadius: {
+        'large':'3rem'
       }
     },
   },
