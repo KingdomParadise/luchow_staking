@@ -121,8 +121,8 @@ const ResponsiveAccordian = () => {
         <div className="flex flex-col gap-1 h-40">
             <p className="text-custom-grey text-xs sm:h-auto h-8">Stacked BNB Balance: 0.00</p>
             <input className="bg-white-pink p-2 py-1 rounded-full w-24 text-xs" />
-            {/* <p className="text-custom-grey text-xs ">Approximate Value: <span className="text-red-dark text-xs">LUCHOW</span></p> */}
-            <button className="text-white border-0 w-24 mt-10 text-xs py-2 px-4 focus:outline-none bg-orange-normal-gradient bg-gradient-to-t  from-red-dark to-orange-normal hover:to-red-300 rounded-full">Unstake</button>
+            <p className="text-custom-grey text-xs sm:h-auto h-8">Approximate Value: <span className="text-red-dark text-xs">LUCHOW</span></p>
+            <button className="text-white border-0 w-24 sm:mt-5 mt-1 text-xs py-2 px-4 focus:outline-none bg-orange-normal-gradient bg-gradient-to-t  from-red-dark to-orange-normal hover:to-red-300 rounded-full">Unstake</button>
         </div>
         <div className="inline h-48" style={{border:'1px solid #8E8E8E'}} />
         <div className="flex flex-col gap-1 h-40 sm:mt-2 mt-2">
