@@ -28,15 +28,15 @@ const Header = () => {
       {navigation.map(({ name, path }, index) => <a key={index} href={path} className="mr-5 hover:text-gray-900 text-2xl">{name}</a>)}
     </nav>
 
-    <div class="2xl:hidden flex items-center">
-	  <button class="outline-none mobile-menu-button" onClick={handleClick}>
+    <div className="2xl:hidden flex items-center">
+	  <button className="outline-none mobile-menu-button" onClick={handleClick}>
 		<svg
-			class="w-10 h-10 text-red-dark"
+			className="w-10 h-10 text-red-dark"
 			x-show="!showMenu"
 			fill="none"
-			stroke-linecap="round"
-			stroke-linejoin="round"
-			stroke-width="2"
+			strokeLinecap="round"
+			strokeLinejoin="round"
+			strokeWidth="2"
 			viewBox="0 0 24 24"
 			stroke="currentColor"
 		>
@@ -45,7 +45,7 @@ const Header = () => {
 	</button>
   </div>
   </div>
-  <div class="hidden mobile-menu">
+  <div className="hidden mobile-menu">
 	<ul className="px-2 py-4">
     {navigation.map((item,index) => <li key={index}><a href={item.path} className="block text-md px-2 py-4 transition duration-300">{item.name}</a></li>)}
 	</ul>
