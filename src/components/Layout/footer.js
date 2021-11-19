@@ -37,7 +37,7 @@ const Footer = () => {
       <p className="mt-2 text-gray-500 max-w-sm text-sm  text-left">LUCHOW is a decentralized digital currency that can be used as a medium of exchange or to facilitate a trade. It is a borderless democratic form of digital money </p>
       </div>
     </div>
-    <div className="flex justify-around md:w-max w-full">
+    <div className="flex justify-around md:w-max w-full gap-2">
     <FooterLinks title="Company" links={[{title:'About Us',path:'/'},{title:'Roadmap',path:'/'}]} />
     <FooterLinks title="Service" links={[{title:'Swap',path:'/'},{title:'Stake',path:'/'},{title:'NFT',path:'/'},{title:'Donate',path:'/'}]} />
     <FooterLinks title="Legal" links={[{title:'Terms & Conditions',path:'/'},{title:'Privacy Policy',path:'/'},{title:'Disclaimer',path:'/'}]} />

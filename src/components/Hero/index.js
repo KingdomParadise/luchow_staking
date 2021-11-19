@@ -13,9 +13,9 @@ const LeftContent = () => {
                 <div className="flex mt-3 items-center sm:gap-2 gap-1">
                     <img src="/lunachow.png" width="46" height="46" alt="logo" />
                     <h2 className="text-orange md:text-3xl sm:text-2xl text-xl font-bold text-center">12154.579 </h2>
-                    <div className="flex sm:gap-2 gap-1">
+                    <div className="flex sm:gap-2 gap-1 items-baseline">
                         <h3 className="text-white font-bold md:text-3xl sm:text-2xl text-xl">LUCHOW</h3>
-                        <p className="text-gray-300 font-bold md:text-2xl sm:text-lg text-xs self-end">≈$600</p>
+                        <p className="text-gray-300 font-bold md:text-2xl sm:text-lg text-xs">≈$600</p>
                     </div>
                     
                 </div>
@@ -34,9 +34,9 @@ const ContentCard = ({children,imageSrc,title,amount,displayMatic}) => {
             <div className="flex items-center gap-1 ">
                     <img src="/lunachow.png" className="lg:w-9 lg:h-9 w-7 h-7" alt="logo" />
                     <h2 className="text-orange lg:text-lg text-base font-extrabold text-center">{amount}</h2>
-                    <div className="flex lg:gap-2 gap-1">
+                    <div className="flex lg:gap-2 gap-1 items-baseline">
                     <h3 className="text-white font-bold lg:text-lg text-base">LUCHOW</h3>
-                    <p className="text-gray-300 font-bold lg:text-sm text-xs self-end">≈$600</p>
+                    <p className="text-gray-300 font-bold lg:text-sm text-xs">≈$600</p>
                     </div>
             </div>
             {children}

@@ -15,7 +15,7 @@ const Balance = ({title,amount,currency,imageSrc}) => {
         <div className="flex items-center gap-2 justify-end">
                     <img src={imageSrc} width="36" height="36" alt="logo" />
                     <h2 className="text-orange text-2xl font-extrabold text-center">{amount}</h2>
-                    <div className="flex gap-1">
+                    <div className="flex gap-1 items-baseline">
                     <h3 className="text-white font-bold text-xl">{currency}</h3>
                     <p className="text-gray-300 font-bold text-lg">≈$600</p>
                     </div>
@@ -37,7 +37,7 @@ const RightContent = ({title,buttonText,staked,earned,imageSrc}) => {
             <div className="flex-col text-right ">
                 <Balance title="Staked Balance" amount={staked} currency={title} imageSrc={imageSrc} />
                 <hr className="border-orange my-3" />
-                <Balance title="Earned" amount={earned} currency={title} imageSrc="/lunachow.png" />
+                <Balance title="Earned" amount={earned} currency="LUCHOW" imageSrc="/lunachow.png" />
             </div>
         </div>
     </div>
@@ -78,7 +78,7 @@ const ResponsiveRightContent = ({title,buttonText,staked,earned,imageSrc}) => {
         <div className="flex gap-1 items-center sm:flex-nowrap flex-wrap justify-end">
                     <img src="/lunachow.png" className="mb-0" width="16" height="16" alt="logo" />
                     <h3 className="text-orange font-bold text-xs">{earned}</h3>
-                    <p className="text-gray-300 font-bold text-xs"><span className="text-white font-normal">LUCHOW</span> >≈$600</p>
+                    <p className="text-gray-300 font-bold text-xs"><span className="text-white font-normal">LUCHOW</span> ≈$600</p>
         </div>
         </div>
     </div>
