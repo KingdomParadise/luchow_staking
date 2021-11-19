@@ -29,8 +29,8 @@ const RightContent = ({title,buttonText,staked,earned,imageSrc}) => {
         <div className="absolute  w-3/4 bg-cream p-4 -top-7 text-center text-black text-3xl" style={{left:'10%',borderRadius:'4rem'}}>
             <p className="font-medium">Stake {title} to Earn LUCHOW Rewards</p>
         </div>
-        <div className="flex justify-between py-24 xl:px-24 px-16 items-center">
-            <p className="text-white font-bold text-3xl">{title}</p>
+        <div className="flex justify-between py-24 xl:px-24 px-6 items-center">
+            <p className="text-white font-bold 2xl:text-3xl text-2xl">{title}</p>
             <button style={{left:'10%',borderRadius:'4rem'}} className="text-white border-0 text-2xl py-4 px-10 focus:outline-none bg-orange-normal-gradient bg-gradient-to-t  from-red-dark to-orange-normal hover:to-red-300 rounded-3xl">
               {buttonText}
             </button>
@@ -46,14 +46,14 @@ const RightContent = ({title,buttonText,staked,earned,imageSrc}) => {
 
 
 const ResponsiveLeftContent = ({imageSrc,title}) => {
-    return <div className="lg:hidden bg-cream w-28 flex rounded-l-2xl flex-col py-4 px-4 justify-center items-center">
+    return <div className="lg:hidden bg-cream sm:w-28 w-24 flex rounded-l-2xl flex-col py-4 justify-center items-center">
     <img src={imageSrc} alt="coin" className="w-6 h-6" />
-    <p className="text-white text-xs font-medium mt-3">{title}</p>
+    <p className="text-white text-xs sm:font-medium mt-3">{title}</p>
     </div>
 }
 
 const ResponsiveRightContent = ({title,buttonText,staked,earned,imageSrc}) => {
-    return <div className="lg:hidden bg-red-dark w-full rounded-r-2xl relative p-3 py-8">
+    return <div className="lg:hidden bg-red-dark w-full rounded-r-2xl relative sm:px-3 px-1 py-8">
     <div className="absolute w-3/4 bg-cream p-1 -top-4 text-center text-black" style={{left:'10%',borderRadius:'4rem'}}>
         <p className="text-xs">Stake {title} to Earn LUCHOW Rewards</p>
     </div>
@@ -65,20 +65,20 @@ const ResponsiveRightContent = ({title,buttonText,staked,earned,imageSrc}) => {
             </button>
         </div>
         <div className="flex justify-between mt-3">
-             <p className="text-white text-xs">Staked Balance</p>
-             <div className="flex gap-1">
+             <p className="text-white text-xs sm:w-auto w-20">Staked Balance</p>
+             <div className="flex gap-1 sm:flex-nowrap items-center flex-wrap justify-end">
                     <img src={imageSrc} width="16" height="16" alt="logo" />
-                    <h3 className="text-orange font-bold text-xs">{staked} <span className="text-white font-normal">{title}</span></h3>
-                    <p className="text-gray-300 font-bold text-xs">≈$600</p>
+                    <h3 className="text-orange font-bold text-xs">{staked}</h3>
+                    <p className="text-gray-300 font-bold text-xs"> <span className="text-white font-normal">{title}</span> ≈$600</p>
             </div>
         </div>
         <hr className="border-orange my-3" />
-        <div className="flex justify-between mt-1">
-        <p className="text-white text-xs">Earned</p>
-        <div className="flex gap-1 items-center">
+        <div className="flex justify-between items-center mt-1">
+        <p className="text-white text-xs sm:w-auto w-20">Earned</p>
+        <div className="flex gap-1 items-center sm:flex-nowrap flex-wrap justify-end">
                     <img src="/lunachow.png" className="mb-0" width="16" height="16" alt="logo" />
-                    <h3 className="text-orange font-bold text-xs">{earned} <span className="text-white font-normal">LUCHOW</span></h3>
-                    <p className="text-gray-300 font-bold text-xs">≈$600</p>
+                    <h3 className="text-orange font-bold text-xs">{earned}</h3>
+                    <p className="text-gray-300 font-bold text-xs"><span className="text-white font-normal">LUCHOW</span> >≈$600</p>
         </div>
         </div>
     </div>
@@ -115,20 +115,20 @@ const ResponsiveAccordian = () => {
     <div className="flex justify-around items-center pt-24 gap-2">
         <div className="flex flex-col gap-1 h-40">
             <p className="text-custom-grey text-xs sm:h-auto h-8">Available BNB Balance: 0.00</p>
-            <input className="bg-white-pink p-2 py-1 rounded-full w-24 text-xs" />
-            <button className="text-white border-0 w-24 mt-10 text-xs py-2 px-4 focus:outline-none bg-orange-normal-gradient bg-gradient-to-t  from-red-dark to-orange-normal hover:to-red-300 rounded-full">Approve</button>
+            <input className="bg-white-pink p-2 py-1 rounded-full sm:w-24 w-20 text-xs" />
+            <button className="text-white border-0 sm:w-24 w-18 mt-10 text-xs py-2 px-4 focus:outline-none bg-orange-normal-gradient bg-gradient-to-t  from-red-dark to-orange-normal hover:to-red-300 rounded-full">Approve</button>
         </div>
         <div className="flex flex-col gap-1 h-40">
             <p className="text-custom-grey text-xs sm:h-auto h-8">Stacked BNB Balance: 0.00</p>
-            <input className="bg-white-pink p-2 py-1 rounded-full w-24 text-xs" />
+            <input className="bg-white-pink p-2 py-1 rounded-full sm:w-24 w-20 text-xs" />
             <p className="text-custom-grey text-xs sm:h-auto h-8">Approximate Value: <span className="text-red-dark text-xs">LUCHOW</span></p>
-            <button className="text-white border-0 w-24 sm:mt-5 mt-1 text-xs py-2 px-4 focus:outline-none bg-orange-normal-gradient bg-gradient-to-t  from-red-dark to-orange-normal hover:to-red-300 rounded-full">Unstake</button>
+            <button className="text-white border-0 sm:w-24 w-18 sm:mt-5 mt-1 text-xs py-2 px-4 focus:outline-none bg-orange-normal-gradient bg-gradient-to-t  from-red-dark to-orange-normal hover:to-red-300 rounded-full">Unstake</button>
         </div>
         <div className="inline h-48" style={{border:'1px solid #8E8E8E'}} />
         <div className="flex flex-col gap-1 h-40 sm:mt-2 mt-2">
           <p className="text-custom-grey text-xs text-center sm:h-auto h-8">Total LUCHOW Rewards</p>
-          <p className="text-red-dark text-sm text-center">0.00</p>
-          <button className="text-white border-0 w-24 mt-10 text-xs py-2 px-4 focus:outline-none bg-orange-normal-gradient bg-gradient-to-t  from-red-dark to-orange-normal hover:to-red-300 rounded-full">Claim</button>
+          <p className="text-red-dark text-sm text-center sm:mt-0 mt-2">0.00</p>
+          <button className="text-white border-0 sm:w-24 w-18 mt-8 text-xs py-2 px-4 focus:outline-none bg-orange-normal-gradient bg-gradient-to-t  from-red-dark to-orange-normal hover:to-red-300 rounded-full">Claim</button>
         </div>
     </div>
 </div>
