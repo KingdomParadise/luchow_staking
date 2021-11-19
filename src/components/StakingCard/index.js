@@ -3,7 +3,7 @@ import React from "react";
 
  
 const LeftContent = ({imageSrc}) => {
-    return <div className="hidden bg-cream w-96 lg:flex justify-center items-center" style={{borderTopLeftRadius:'7rem',borderBottomLeftRadius:'7rem'}}>
+    return <div className="hidden bg-cream w-80 lg:flex justify-center items-center" style={{borderTopLeftRadius:'7rem',borderBottomLeftRadius:'7rem'}}>
         <img src={imageSrc} alt="coin" />
     </div>
 }
@@ -15,8 +15,8 @@ const Balance = ({title,amount,currency,imageSrc}) => {
         <div className="flex items-center gap-2 justify-end">
                     <img src={imageSrc} width="36" height="36" alt="logo" />
                     <h2 className="text-orange text-2xl font-extrabold text-center">{amount}</h2>
-                    <div className="flex gap-2">
-                    <h3 className="text-white font-bold text-2xl">{currency}</h3>
+                    <div className="flex gap-1">
+                    <h3 className="text-white font-bold text-xl">{currency}</h3>
                     <p className="text-gray-300 font-bold text-lg">≈$600</p>
                     </div>
                     
@@ -29,7 +29,7 @@ const RightContent = ({title,buttonText,staked,earned,imageSrc}) => {
         <div className="absolute  w-3/4 bg-cream p-4 -top-7 text-center text-black text-3xl" style={{left:'10%',borderRadius:'4rem'}}>
             <p className="font-medium">Stake {title} to Earn LUCHOW Rewards</p>
         </div>
-        <div className="flex justify-between py-24 xl:px-24 px-6 items-center">
+        <div className="flex justify-between py-24 px-4 items-center">
             <p className="text-white font-bold 2xl:text-3xl text-2xl">{title}</p>
             <button style={{left:'10%',borderRadius:'4rem'}} className="text-white border-0 text-2xl py-4 px-10 focus:outline-none bg-orange-normal-gradient bg-gradient-to-t  from-red-dark to-orange-normal hover:to-red-300 rounded-3xl">
               {buttonText}
