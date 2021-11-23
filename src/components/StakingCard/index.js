@@ -14,10 +14,10 @@ const Balance = ({title,amount,currency,imageSrc}) => {
         <p className="text-white text-xl font-bold">{title}</p>
         <div className="flex items-center gap-2 justify-end">
                     <img src={imageSrc} width="36" height="36" alt="logo" />
-                    <h2 className="text-orange text-2xl font-extrabold text-center">{amount}</h2>
+                    <h2 className="text-orange text-2xl font-medium text-center">{amount}</h2>
                     <div className="flex gap-1 items-baseline">
                     <h3 className="text-white font-bold text-xl">{currency}</h3>
-                    <p className="text-gray-300 font-bold text-lg">≈$600</p>
+                    <p className="text-gray-300 font-bold text-lg">≈ $600</p>
                     </div>
                     
         </div>
@@ -68,8 +68,8 @@ const ResponsiveRightContent = ({title,buttonText,staked,earned,imageSrc}) => {
              <p className="text-white text-xs sm:w-auto w-20">Staked Balance</p>
              <div className="flex gap-1 sm:flex-nowrap items-center flex-wrap justify-end">
                     <img src={imageSrc} width="16" height="16" alt="logo" />
-                    <h3 className="text-orange font-bold text-xs">{staked}</h3>
-                    <p className="text-gray-300 font-bold text-xs"> <span className="text-white font-normal">{title}</span> ≈$600</p>
+                    <h3 className="text-orange font-medium text-xs">{staked}</h3>
+                    <p className="text-gray-300 font-bold text-xs"> <span className="text-white font-normal">{title}</span> ≈ $600</p>
             </div>
         </div>
         <hr className="border-orange my-3" />
@@ -77,8 +77,8 @@ const ResponsiveRightContent = ({title,buttonText,staked,earned,imageSrc}) => {
         <p className="text-white text-xs sm:w-auto w-20">Earned</p>
         <div className="flex gap-1 items-center sm:flex-nowrap flex-wrap justify-end">
                     <img src="/lunachow.png" className="mb-0" width="16" height="16" alt="logo" />
-                    <h3 className="text-orange font-bold text-xs">{earned}</h3>
-                    <p className="text-gray-300 font-bold text-xs"><span className="text-white font-normal">LUCHOW</span> ≈$600</p>
+                    <h3 className="text-orange font-medium text-xs">{earned}</h3>
+                    <p className="text-gray-300 font-bold text-xs"><span className="text-white font-normal">LUCHOW</span> ≈ $600</p>
         </div>
         </div>
     </div>
